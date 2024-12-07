@@ -31,6 +31,7 @@ public class PostagemController {
 	@Autowired
 	private PostagemRepository postagemRepository;
 	
+	@Autowired
 	private TemaRepository temaRepository;
 
 	@GetMapping
