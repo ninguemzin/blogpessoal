@@ -35,13 +35,13 @@ public class UsuarioControllerTest {
 	void start() {
 		usuarioRepository.deleteAll();
 		
-		usuarioService.cadastrarUsuario(new Usuario(0L,"Root","root@root.com","rootroot", "-"));
+		usuarioService.cadastrarUsuario(new Usuario(0L,"Root","root@root.com","rootroot", "url"));
 	}
 	
 	@Test
 	@DisplayName("Cadastrar Um Usuário")
 	public void deveCriarUmUsuario() {
-		HttpEntity<Usuario> corpoRequisicao = new HttpEntity<Usuario>(new Usuario(0L,"Bruna","bruna@email.com","12345DEW", "-"));
+		HttpEntity<Usuario> corpoRequisicao = new HttpEntity<Usuario>(new Usuario(1L,"Bruna","bruna@email.com","12345789", "url"));
 	
 		ResponseEntity<Usuario> corpoResposta = testRestTemplate.exchange("/usuarios/cadastrar",HttpMethod.POST,corpoRequisicao,Usuario.class);
 		
