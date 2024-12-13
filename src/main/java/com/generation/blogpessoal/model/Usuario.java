@@ -23,7 +23,7 @@ import jakarta.validation.constraints.Size;
 @Table(name = "tb_usuarios")
 public class Usuario {
 	
-	@Schema(example = "email@email.com.br")
+	@Schema(example = "alm1427@hotmail.com")
 	@NotNull(message = "O Atributo Usuário é Obrigatório!")
 	@Email(message = "O Atributo Usuário deve ser um email válido!")
 	private String Usuario;
